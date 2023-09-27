@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Task - 4</title>
+</head>
+
+<body>
+    <script>
+        function showDate() {
+            const currentDate = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const date = currentDate.toLocaleDateString(undefined, options).replace(/\//g, '//');
+            document.getElementById('date').innerHTML = `${date}`;
+        }
+    </script>
+    <button onclick="showDate()">show date</button>
+    <p id="date"></p>
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">show Time</button>
+    <p id="demo"></p>
+</body>
+
+</html>
